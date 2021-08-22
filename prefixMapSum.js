@@ -45,6 +45,6 @@ result.insert("thunder", 2);
 result.insert("thursday", 1);
 result.insert("thought", 8);
 
-console.log(result.sum('tes')); //10
-console.log(result.sum('th')); //11
-console.log(result.sum('thu')); //3
+console.log(result.sum('tes') === 10);
+console.log(result.sum('th') === 11);
+console.log(result.sum('thu') === 3);
