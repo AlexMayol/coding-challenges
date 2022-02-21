@@ -13,69 +13,75 @@ Given the string ")(", you should return 2, since we must remove all of them.
 const REGEXP = /(\(\))/g;
 
 const numberOfElementsToRemove = (parentheses) => {
-    let state = parentheses;
+  let state = parentheses;
 
-    const canRemove = (str) => {
-        const result = str.replace(REGEXP, "");
+  const canRemove = (str) => {
+    const result = str.replace(REGEXP, "");
 
-        if (result !== str) {
-            state = result;
-            canRemove(result);
-        }
+    if (result !== str) {
+      state = result;
+      canRemove(result);
+    }
 
-        return;
-    };
+    return;
+  };
 
-    canRemove(parentheses);
+  canRemove(parentheses);
 
-    return state.length;
+  return state.length;
 };
 
 const testCases = [
-    {
-        input: "()())()",
-        output: 1,
-    },
-    {
-        input: "()())()(",
-        output: 2,
-    },
-    {
-        input: "))))(()()))()(()()(",
-        output: 7,
-    },
-    {
-        input: "()()()",
-        output: 0,
-    },
-    {
-        input: "))))((((",
-        output: 8,
-    },
-    {
-        input: ")(",
-        output: 2,
-    },
-    {
-        input: ")())()((",
-        output: 4,
-    },
-    {
-        input: ")))(((",
-        output: 6,
-    },
-    {
-        input: ")())(",
-        output: 3,
-    },
-    {
-        input: "()()()()()()()()((((())))))",
-        output: 1,
-    },
-    {
-        input: "()))))(()((())",
-        output: 6,
-    },
+  {
+    input: "()())()",
+    output: 1,
+  },
+  {
+    input: "()())()(",
+    output: 2,
+  },
+  {
+    input: "))))(()()))()(()()(",
+    output: 7,
+  },
+  {
+    input: "()()()",
+    output: 0,
+  },
+  {
+    input: "))))((((",
+    output: 8,
+  },
+  {
+    input: ")(",
+    output: 2,
+  },
+  {
+    input: ")())()((",
+    output: 4,
+  },
+  {
+    input: ")))(((",
+    output: 6,
+  },
+  {
+    input: ")())(",
+    output: 3,
+  },
+  {
+    input: "()()()()()()()()((((())))))",
+    output: 1,
+  },
+  {
+    input: "()))))(()((())",
+    output: 6,
+  },
 ];
 
-testCases.forEach(({ input, output }, i) => console.log(`Test #${i}: ${numberOfElementsToRemove(input) === output ? "✅" : "❌"}`));
+testCases.forEach(({ input, output }, i) =>
+  console.log(
+    `Test #${i + 1}: ${
+      numberOfElementsToRemove(input) === output ? "✅" : "❌"
+    }`
+  )
+);

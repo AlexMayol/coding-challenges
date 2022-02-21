@@ -11,25 +11,20 @@
 // For example, given x = 10 and lst = [9, 12, 3, 5, 14, 10, 10], one partition may be [9, 3, 5, 10, 10, 12, 14].
 
 const partition = (x, list) => {
+  const minorThan = [];
+  const equalThan = [];
+  const greaterThan = [];
 
-    const minorThan = [];
-    const equalThan = [];
-    const greaterThan = [];
+  for (let i of list) {
+    if (i - x < 0) minorThan.push(i);
+    else if (i - x == 0) equalThan.push(i);
+    else if (i - x > 0) greaterThan.push(i);
+  }
 
-    for (let i of list) {
-
-        if (i - x < 0)
-            minorThan.push(i)
-        else if (i - x == 0)
-            equalThan.push(i)
-        else if (i - x > 0)
-            greaterThan.push(i)
-    }
-
-    return [...minorThan, ...equalThan, ...greaterThan]
-}
+  return [...minorThan, ...equalThan, ...greaterThan];
+};
 
 x = 34;
-lst = [34, 1, 33, 2, 10, 212, 10, 4, 55, 4, 20, 10, 9, 12, 3, 5, 14, 10, 10]
+lst = [34, 1, 33, 2, 10, 212, 10, 4, 55, 4, 20, 10, 9, 12, 3, 5, 14, 10, 10];
 
 console.log(partition(x, lst));

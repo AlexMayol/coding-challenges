@@ -19,21 +19,21 @@ assert mapsum.sum("col") == 5
 */
 
 class PrefixMapSum {
-    constructor() {
-        this.map = {};
-    }
-    insert(key, val) {
-        this.map[key] = val;
-    }
-    sum(prefix) {
-        let keys = Object.keys(this.map);
-        let total = 0;
-        keys.forEach((key) => {
-            if (key.includes(prefix)) total += this.map[key];
-        });
+  constructor() {
+    this.map = {};
+  }
+  insert(key, val) {
+    this.map[key] = val;
+  }
+  sum(prefix) {
+    let keys = Object.keys(this.map);
+    let total = 0;
+    keys.forEach((key) => {
+      if (key.includes(prefix)) total += this.map[key];
+    });
 
-        return total;
-    }
+    return total;
+  }
 }
 
 const result = new PrefixMapSum();
@@ -45,6 +45,6 @@ result.insert("thunder", 2);
 result.insert("thursday", 1);
 result.insert("thought", 8);
 
-console.log(result.sum('tes') === 10);
-console.log(result.sum('th') === 11);
-console.log(result.sum('thu') === 3);
+console.log(result.sum("tes") === 10);
+console.log(result.sum("th") === 11);
+console.log(result.sum("thu") === 3);
