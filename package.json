@@ -1,0 +1,23 @@
+{
+  "name": "coding-challenges",
+  "version": "1.0.0",
+  "description": "Code challenges found on the Internet and done for fun.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexMayol/coding-challenges.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexMayol/coding-challenges/issues"
+  },
+  "homepage": "https://github.com/AlexMayol/coding-challenges#readme",
+  "dependencies": {
+    "jest": "^27.5.1"
+  }
+}
