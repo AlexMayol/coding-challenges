@@ -1,7 +1,7 @@
 {
   "name": "coding-challenges",
   "version": "1.0.0",
-  "description": "Code challenges found on the Internet and done for fun.",
+  "description": "Code challenges found on the Internet and solved for fun.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -17,7 +17,10 @@
     "url": "https://github.com/AlexMayol/coding-challenges/issues"
   },
   "homepage": "https://github.com/AlexMayol/coding-challenges#readme",
-  "dependencies": {
-    "jest": "^27.5.1"
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3"
   }
 }

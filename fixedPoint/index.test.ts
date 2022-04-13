@@ -1,4 +1,4 @@
-const { fixedPoint } = require('./index')
+import { fixedPoint } from './index'
 
 const validations = [
     {

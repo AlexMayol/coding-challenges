@@ -3,7 +3,7 @@
 
 // For example, given [-6, 0, 2, 40], you should return 2. Given [1, 5, 7, 8], you should return False.
 
-const fixedPoint = (arr) => {
+export const fixedPoint = (arr: number[]) => {
     for (let index = 0; index < arr.length; index++) {
         if (arr[index] == index) {
             return arr[index]
@@ -12,4 +12,3 @@ const fixedPoint = (arr) => {
     return false
 }
 
-module.exports = { fixedPoint }
