@@ -8,10 +8,11 @@ You can assume the string to be encoded have no digits and consists solely of al
 You can assume the string to be decoded is valid.
 */
 
-export const runLengthEncoding = (a: string): string => {
-    const arr = a.split('');
+export const runLengthEncoding = (input: string): string => {
+    const arr = input.split('');
     const result = [];
     let count = 1;
+
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === arr[i + 1]) {
             count++;
@@ -23,10 +24,11 @@ export const runLengthEncoding = (a: string): string => {
     return result.join('');
 }
 
-export const runLenghtDecoding = (a: string): string => {
-    const arr = a.split('');
+export const runLenghtDecoding = (input: string): string => {
+    const arr = input.split('');
     const result = [];
     let count = '';
+
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].match(/[0-9]/)) {
             count += arr[i];
